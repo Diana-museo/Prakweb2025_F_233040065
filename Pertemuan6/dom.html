@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="judul">Hello World!</h1>
+    <p id="paragraf">Paragraf 1</p>
+
+    <button id="ubah">Ubah P1</button>]
+    <button id="ubahJudul">Ubah Judul</button>
+
+    <script>
+        // PENGGUNAAN EVENT HANDLER "ONCLICK"
+        // seleksi tag button
+        const btn = document.getElementById('ubah');
+
+        // seleksi tag paragraf
+        const p = document.getElementById('p');
+
+        function ubahParaf() {
+            // ubah background paragraf menjadi merah
+            p.style.backgroundColor = 'red';
+        }
+
+        // Ketika btn diklik maka panggil function ubahParaf
+        btn.onclick = ubahParaf;
+
+        // PENGGUNAAN EVENT HANDLER "ADD EVENT LISTENER"
+        // Seleksi tag dengan id judul
+        const judul = document.getElementById('judul');
+        // Seleksi tag button dengan id ubahJudul
+        const btnJudul = document.getElementById('ubahJudul');
+
+        // Ketika btn ubahJudul diklik, maka jalankan
+        btnJudul.addEventListener('click', function() {
+            // tampilkan alert dan ubah judul
+            alert('Judul berhasil di ubah');
+            judul.innerHTML = 'Mantap';
+        });
+    </script>
+</body>
+</html>

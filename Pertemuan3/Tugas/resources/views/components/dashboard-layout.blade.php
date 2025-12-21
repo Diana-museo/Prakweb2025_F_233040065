@@ -13,19 +13,13 @@
 </head>
 <body>
     <nav>
-        <a href="{{ url('/dashboard') }}">Dashboard</a>
-        <a href="{{ url('/categories') }}">Categories</a>
-        <a href="{{ url('/posts') }}">Posts</a>
-        <a href="{{ url('/users') }}">Users</a>
-        @if(auth()->check())
-            <form action="{{ route('logout') }}" method="POST" class="inline">
-                @csrf
-                <button type="submit" class="text-red-600 hover:underline">
-                    Logout
-                </button>
-            </form>
-        @endif
-
+        <a href="{{ url('/') }}">Home</a>
+        <a href="{{ url('about') }}">About</a>
+        <a href="{{ url('blog') }}">Blog</a>
+        <a href="{{ url('contact') }}">Contact</a>
+        <a href="{{ url('categories') }}">Categories</a>
+        <a href="{{ url('posts') }}">Posts</a>
+        <a href="{{ url('users') }}">Users</a>
     </nav>
 
     {{ $slot }}
